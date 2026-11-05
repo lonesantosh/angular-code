@@ -9,21 +9,24 @@ import { EmployeeCrud } from '../employee-crud/employee-crud';
 import { Demo1 } from '../demo1/demo1';
 import { Demo2 } from '../demo2/demo2';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
+import { EmployeeCrudHttp } from '../employee-crud-http/employee-crud-http';
+import { UserCrudHttp } from '../user-crud-http/user-crud-http';
 
 @Component({
   imports: [
-//DataBinding,
- //DirectivesDemo,
-  //UserList,
-  //ProductList,
-  //PipesDemo,
-  //ParentDemo,
-  //EmployeeCrud,
-  //Demo1,
-  //Demo2,
-  HttpDemo1,
-
-  ],
+    //DataBinding,
+    //DirectivesDemo,
+    //UserList,
+    //ProductList,
+    //PipesDemo,
+    //ParentDemo,
+    //EmployeeCrud,
+    //Demo1,
+    //Demo2,
+    //HttpDemo1,
+   // EmployeeCrudHttp,
+    UserCrudHttp
+],
   selector: 'app-body',
   styleUrl: './body.css',
   templateUrl: './body.html',
