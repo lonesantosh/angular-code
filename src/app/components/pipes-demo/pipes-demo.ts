@@ -12,7 +12,6 @@ import { RemainingPipe } from '../../custom_pipes/remaining-pipe';
     CommonModule, FormsModule,
     RemainingPipe, OrdinalPipe, AlphaNumeric,
     MySortPipe
-
   ],
   selector: 'app-pipes-demo',
   styleUrl: './pipes-demo.css',

@@ -4,6 +4,7 @@ import { DirectivesDemo } from '../directives-demo/directives-demo';
 import { UserList } from '../user-list/user-list';
 import { ProductList } from '../product-list/product-list';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
+import { ParentDemo } from '../parent-demo/parent-demo';
 
 @Component({
   imports: [
@@ -11,7 +12,8 @@ import { PipesDemo } from '../pipes-demo/pipes-demo';
  //DirectivesDemo,
   //UserList,
   //ProductList,
-  PipesDemo
+  //PipesDemo,
+  ParentDemo
  
   ],
   selector: 'app-body',
