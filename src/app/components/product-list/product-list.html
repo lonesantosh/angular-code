@@ -1,0 +1,49 @@
+<h3 class="text-center">Product List</h3>
+
+<button class="btn btn-primary" (click)="openSweetAlert()">open sweet alert</button>
+<button class="btn btn-success mx-1" (click)="openConfirmation()">openConfirmation</button>
+<button class="btn btn-primary" (click)="openSnackBar()">openSnackBar</button>
+
+<div class="container">
+  <div class="row mt-2">
+    <div class="col-sm-6 offset-3">
+      <input type="search" class="form-control" appZoomIn
+        placeholder="Search..." appTextOnly appDisablePaste />
+    </div>
+    <div class="col-sm-3">
+      <button class="btn btn-primary" (click)="sortAsc()">Sort Asc</button>
+      <button class="btn btn-secondary mx-1" (click)="sortDesc()">Sort Desc</button>
+    </div>
+  </div>
+  <div class="row my-2 mt-2">
+    @for (product of productArr| paginate: { itemsPerPage: 4, currentPage: p}; track $index) {
+    <div class="col-sm-3">
+      <div class="card">
+        <img src="{{product.image}}" class="card-img-top" alt="..." height="200px">
+        <div class="card-body text-center" appZoomIn appZoomOut>
+          <h5 class="card-title">{{product.category}}</h5>
+          <p class="card-text text-truncate">{{product.title}}</p>
+          <p class="card-text text-truncate">{{product.description}}</p>
+          <p class="card-text">
+            <fa-icon [icon]="faInr"></fa-icon>
+            {{product.price}}
+          </p>
+          <p class="card-text">
+            {{product.rating.rate}}
+            <fa-icon [icon]="faStar"></fa-icon>
+          </p>
+          <!-- <button class="btn btn-primary mx-1" [routerLink]="['/productdetails']"
+            [queryParams]="{id:product.id,title:product.title,price:product.price}">Details</button> -->
+
+
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="row">
+    <div class="text-center">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+</div>
