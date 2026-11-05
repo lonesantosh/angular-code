@@ -1,0 +1,46 @@
+<h3 class="text-center">Let's Learn Data-Binding</h3>
+
+<div class="border border-3 rounded-3 p-3 mt-2">
+  <div>Course name is: {{courseName}}</div>
+
+  <div>
+    <img src="{{my_img_url}}" alt="" />
+    <img [src]="my_img_url" alt="" />
+    <img bind-src="my_img_url" alt="" />
+  </div>
+
+  <div>1 way: <input value="{{courseName}}" /></div>
+  <div>1 way: <input [value]="courseName" /></div>
+  <div>1 way: <input bind-value="courseName" /></div>
+  <div>2 way: <input [(ngModel)]="courseName" /></div>
+
+  <div class="mt-2">
+    <button class="btn btn-primary" disabled="{{flag}}">Click Me</button>
+    <button class="btn btn-primary mx-1" [disabled]="flag">Click Me</button>
+    <button class="btn btn-primary mx-1" bind-disabled="flag">Click Me</button>
+    <span>Flag: {{flag}}</span>
+    <button class="btn btn-primary" (click)="toggleFlag()">Toggle Flag</button>
+  </div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 mt-2">
+  <div>Attribute Binding:</div>
+  <div>Property Binding: <input [maxLength]="max_length" /></div>
+  <div>Attribute Binding: <input [attr.maxlength]="max_length" /></div>
+  <!-- maxLength is a property but maxlength is an attribute -->
+</div>
+
+<div class="border border-3 rounded-3 p-3 mt-2">
+  <div>Addition of 2 numbers using 2-way Binding:</div>
+  <input type="number" [(ngModel)]="num1" />
+  <input class="mx-2" type="number" [(ngModel)]="num2" />
+  <div>Addition of {{num1}} and {{num2}} is {{num1+num2}}</div>
+</div>
+
+<div class="border border-3 rounded-3 p-3 mt-2">
+  <div>Addition of 2 numbers using Template Reference Variable:</div>
+  <input type="number" #myBox1 />
+  <input class="mx-2" type="number" ref-myBox2 />
+  <div>Addition of {{myBox1.value}} and {{myBox2.value}} is {{addResult}}</div>
+  <button class="btn btn-success" (click)="addition(myBox1.value , myBox2.value)">Add</button>
+</div>
