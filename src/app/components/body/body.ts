@@ -6,6 +6,9 @@ import { ProductList } from '../product-list/product-list';
 import { PipesDemo } from '../pipes-demo/pipes-demo';
 import { ParentDemo } from '../parent-demo/parent-demo';
 import { EmployeeCrud } from '../employee-crud/employee-crud';
+import { Demo1 } from '../demo1/demo1';
+import { Demo2 } from '../demo2/demo2';
+import { HttpDemo1 } from '../http-demo1/http-demo1';
 
 @Component({
   imports: [
@@ -15,12 +18,17 @@ import { EmployeeCrud } from '../employee-crud/employee-crud';
   //ProductList,
   //PipesDemo,
   //ParentDemo,
-  EmployeeCrud
- 
+  //EmployeeCrud,
+  //Demo1,
+  //Demo2,
+  HttpDemo1,
 
   ],
   selector: 'app-body',
   styleUrl: './body.css',
   templateUrl: './body.html',
 })
-export class Body {}
+export class Body {
+
+  flag = true;
+}
