@@ -1,0 +1,115 @@
+<h3 class="text-center">Let's learn Directives</h3>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>if else before Angular-17</div>
+  <input type="number" [(ngModel)]="num" />
+  <div *ngIf="num%2 ==0">{{num}} is Even</div>
+  <div *ngIf="num%2 !==0">{{num}} is Odd</div>
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>if else After Angular-17</div>
+  @if(num%2 ==0){
+  <div>{{num}} is Even</div>
+  }@else {
+  <div>{{num}} is Odd</div>
+  }
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <pre>
+    when if condition is false, the element will neither be displayed on the page/screen nor it will be there in the DOM.
+    when [hidden] condition is true, the element will not be displayed on the page/screen(display:none) but it will be there in the DOM.
+  </pre>
+  <div [hidden]="num%2!==0">{{num}} is Even</div>
+  <div [hidden]="num%2==0">{{num}} is Odd</div>
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>Switch case:</div>
+  @switch (num) {
+  @case (1) { <h1>Monday</h1> }
+  @case (2) { <h1>Tuesday</h1> }
+  @case (3) { <h1>Wednesday</h1> }
+  @case (4) { <h1>Thursday</h1> }
+  @case (5) { <h1>Friday</h1> }
+  @case (6) { <h1>Saturday</h1> }
+  @case (7) { <h1>Sunday</h1> }
+  @default { <h1>Not a Valid number</h1> }
+  }
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>Course List:</div>
+  <ul>
+    @for (course of courseArr; track $index) {
+    <li>{{course}}</li>
+    }@empty {
+    No Course to display
+    }
+  </ul>
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>Course DropDown:</div>
+  <select>
+    @for (course of courseArr; track $index) {
+    <option>{{course}}</option>
+    }
+  </select>
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>Employee table:</div>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Sl #</th>
+        <th>Emp id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Salary</th>
+        <th>Is First?</th>
+        <th>Is Last?</th>
+        <th>Is Even?</th>
+        <th>Is Odd?</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (emp of employeeArr; track emp.eId) {
+      <tr>
+        <td>{{$index + 1}}</td>
+        <td>{{emp.eId}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.sal}}</td>
+        <td>{{$first}}</td>
+        <td>{{$last}}</td>
+        <td>{{$even}}</td>
+        <td>{{$odd}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
+
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>ngStyle is used to apply some style conditionally:</div>
+  <input type="number" [(ngModel)]="num" />
+  <p [style.color]="num % 2 == 0 ? 'blue' : 'red'"> Add a style </p>
+  <p [style.fontSize.px]='num % 2 == 0 ? 24 : 36'> Add style with unit </p>
+  <p [style.background-color]=" num % 2 == 0?'green':'blue' "> Add style conditionally </p>
+  <p [ngStyle]="num % 2 == 0 ? myStyle1 : myStyle2"> NgStyle for multiple values </p>
+  <p [ngStyle]="myFunction()"> NgStyle for multiple values </p>
+</div>
+
+<div class="border border-3 rounded-3 mt-2 p-3">
+  <div>ngClass is used to apply css classes conditionally/dynamically</div>
+  <input type="number" [(ngModel)]="num" />
+
+  <button class="btn mx-2" [ngClass]="num%2==0 ? 'btn-success' : 'btn-danger'">
+    Class Binding example
+  </button>
+</div>

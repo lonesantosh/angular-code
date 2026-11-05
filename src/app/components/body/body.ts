@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { DataBinding } from '../data-binding/data-binding';
+import { DirectivesDemo } from '../directives-demo/directives-demo';
 
 @Component({
   imports: [
-DataBinding
+//DataBinding
+DirectivesDemo
 
   ],
   selector: 'app-body',
