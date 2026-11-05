@@ -9,7 +9,7 @@ import { Footer } from './components/footer/footer';
 @Component({
   imports: [
   // Carousel, 
-   //Categories, 
+  // Categories, 
    Navbar,
    Body,
    Footer

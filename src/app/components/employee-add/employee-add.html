@@ -1,0 +1,16 @@
+<p>employee-add works!</p>
+
+<div>
+  eid: <input type="text" #eId />
+</div>
+<div>
+  name: <input type="text" #name />
+</div>
+<div>
+  gender: <input type="text" #gender />
+</div>
+<div>
+  salary: <input type="text" #salary />
+</div>
+
+<button (click)="addEmp(eId.value,name.value,gender.value,salary.value)">Add Emp</button>

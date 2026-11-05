@@ -1,0 +1,15 @@
+<div class="container text-center mt-2 ">
+  <div class="row">
+    <div class="border border-2">
+      <div>This is Employee CRUD Component</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 border border-2">
+      <app-employee-table [employees]="employees" (deleteEmpEvent)="deleteEmployee($event)"></app-employee-table>
+    </div>
+    <div class="col-sm-4 border border-2">
+      <app-employee-add (addEmpEvent)="addEmployee($event)"></app-employee-add>
+    </div>
+  </div>
+</div>
