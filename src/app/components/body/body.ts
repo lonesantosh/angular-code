@@ -3,13 +3,15 @@ import { DataBinding } from '../data-binding/data-binding';
 import { DirectivesDemo } from '../directives-demo/directives-demo';
 import { UserList } from '../user-list/user-list';
 import { ProductList } from '../product-list/product-list';
+import { PipesDemo } from '../pipes-demo/pipes-demo';
 
 @Component({
   imports: [
 //DataBinding,
  //DirectivesDemo,
   //UserList,
-  ProductList
+  //ProductList,
+  PipesDemo
  
   ],
   selector: 'app-body',
