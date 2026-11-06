@@ -11,6 +11,7 @@ import { Demo2 } from '../demo2/demo2';
 import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { EmployeeCrudHttp } from '../employee-crud-http/employee-crud-http';
 import { UserCrudHttp } from '../user-crud-http/user-crud-http';
+import { CommentList } from '../comment-list/comment-list';
 
 @Component({
   imports: [
@@ -25,7 +26,12 @@ import { UserCrudHttp } from '../user-crud-http/user-crud-http';
     //Demo2,
     //HttpDemo1,
    // EmployeeCrudHttp,
-    UserCrudHttp
+    //UserCrudHttp,
+    CommentList
+
+
+
+
 ],
   selector: 'app-body',
   styleUrl: './body.css',
