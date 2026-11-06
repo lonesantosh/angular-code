@@ -19,6 +19,7 @@ import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
 import { TodoList } from '../todo-list/todo-list';
 import { TodoAdd } from '../todo-add/todo-add';
 import { HttpDemo2 } from '../http-demo2/http-demo2';
+import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 
 @Component({
   imports: [
@@ -41,8 +42,8 @@ import { HttpDemo2 } from '../http-demo2/http-demo2';
    // SubjectDemo1
     //TodoAdd,
     //TodoList
-    HttpDemo2
-
+    //HttpDemo2
+    SignalDemo1
 
 
 

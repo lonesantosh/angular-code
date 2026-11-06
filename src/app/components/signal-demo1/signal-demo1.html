@@ -1,0 +1,30 @@
+<h3 class="text-center">Let's Learn Signal</h3>
+
+<div class="border border-3 rounded-3 p-3 m-3">
+  <h3>
+    Count: {{count()}}
+    <button (click)="incrementCount()">+</button>
+  </h3>
+  <h3>Count Double: {{countDouble()}}</h3>
+  <h3>Count Square: {{countSquare()}}</h3>
+</div>
+
+
+<h3>userId: {{userId()}}</h3>
+<button class="btn btn-primary" (click)="incrementUserId()">+</button>
+<button class="btn btn-primary mx-2" (click)="deleteEffect()">Delete Effect</button>
+
+<div class="col-sm-3 offset-3">
+  <div class="card">
+    <img src="https://imgproxy.attic.sh/insecure/f:webp/q:90/w:384/plain/https://attic.sh/pbr8ew2h59h73gehscbzyc9estgp"
+      class="card-img-top" alt="...">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{userData().id}}</h5>
+      <h5 class="card-title">{{userData().name}}</h5>
+      <p class="card-text">{{userData().username}}</p>
+      <p class="card-text">{{userData().email}}</p>
+      <p class="card-text">{{userData().phone}}</p>
+      <p class="card-text">{{userData().address.city}}</p>
+    </div>
+  </div>
+</div>
