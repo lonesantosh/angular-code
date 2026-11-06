@@ -15,6 +15,10 @@ import { CommentList } from '../comment-list/comment-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
 import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
+import { SubjectDemo1 } from '../subject-demo1/subject-demo1';
+import { TodoList } from '../todo-list/todo-list';
+import { TodoAdd } from '../todo-add/todo-add';
+import { HttpDemo2 } from '../http-demo2/http-demo2';
 
 @Component({
   imports: [
@@ -31,9 +35,16 @@ import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
    // EmployeeCrudHttp,
     //UserCrudHttp,
     //CommentList
-   // ObservableDemo1
-    //ObservableDemo2
-    ObservableDemo3
+   // ObservableDemo1,
+    //ObservableDemo2,
+    //ObservableDemo3,
+   // SubjectDemo1
+    //TodoAdd,
+    //TodoList
+    HttpDemo2
+
+
+
 
 ],
   selector: 'app-body',
