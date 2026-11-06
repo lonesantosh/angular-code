@@ -12,6 +12,7 @@ import { HttpDemo1 } from '../http-demo1/http-demo1';
 import { EmployeeCrudHttp } from '../employee-crud-http/employee-crud-http';
 import { UserCrudHttp } from '../user-crud-http/user-crud-http';
 import { CommentList } from '../comment-list/comment-list';
+import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
 
 @Component({
   imports: [
@@ -27,8 +28,8 @@ import { CommentList } from '../comment-list/comment-list';
     //HttpDemo1,
    // EmployeeCrudHttp,
     //UserCrudHttp,
-    CommentList
-
+    //CommentList
+    ObservableDemo1
 
 
 
