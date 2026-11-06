@@ -13,6 +13,8 @@ import { EmployeeCrudHttp } from '../employee-crud-http/employee-crud-http';
 import { UserCrudHttp } from '../user-crud-http/user-crud-http';
 import { CommentList } from '../comment-list/comment-list';
 import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
+import { ObservableDemo2 } from '../observable-demo2/observable-demo2';
+import { ObservableDemo3 } from '../observable-demo3/observable-demo3';
 
 @Component({
   imports: [
@@ -29,9 +31,9 @@ import { ObservableDemo1 } from '../observable-demo1/observable-demo1';
    // EmployeeCrudHttp,
     //UserCrudHttp,
     //CommentList
-    ObservableDemo1
-
-
+   // ObservableDemo1
+    //ObservableDemo2
+    ObservableDemo3
 
 ],
   selector: 'app-body',
