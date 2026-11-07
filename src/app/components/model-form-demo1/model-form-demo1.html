@@ -1,0 +1,43 @@
+<h3 class="text-center">Model Driven/Reactive Form</h3>
+
+<div class="col-sm-4 offset-4 border border-3 rounded-3 p-3">
+  <form [formGroup]="registerForm">
+      <p>
+        FirstName: <input formControlName="firstName">
+        @if(registerForm.controls['firstName'].hasError('required')){
+          <div class="text-danger">FirstName is Required</div>
+        }
+        @if(registerForm.controls['firstName'].hasError('minlength')){
+          <div class="text-danger">FirstName should have minimum 5 chars</div>
+        }
+      </p>
+      <p>lastName: <input formControlName="lastName"></p>
+      <p>
+        email: <input formControlName="email">
+        @if(registerForm.controls['email'].hasError('required')){
+          <div class="text-danger">email is Required</div>
+        }
+        @if(registerForm.controls['email'].hasError('email')){
+          <div class="text-danger">email format is wrong</div>
+        }
+      </p>
+      <p>
+        Gender:
+        Male: <input type="radio" formControlName="gender" value="male">
+        FeMale: <input type="radio" formControlName="gender" value="female">
+      </p>
+
+      <div formGroupName="address">
+        <p>city: <input formControlName="city"></p>
+        <p>state: <input formControlName="state"></p>
+        <p>pincode: <input formControlName="pincode"></p>
+      </div>
+
+      <input type="reset" value="Reset" class="mx-1" />
+      <input type="submit" value="Submit" />
+  </form>
+
+  <button (click)="patchFormValue()">Patch value</button>
+
+  <pre>{{registerForm.value | json}}</pre>
+</div>
