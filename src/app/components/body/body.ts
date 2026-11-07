@@ -21,6 +21,7 @@ import { TodoAdd } from '../todo-add/todo-add';
 import { HttpDemo2 } from '../http-demo2/http-demo2';
 import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 import { FormDemo1 } from '../form-demo1/form-demo1';
+import { TemplateFormDemo } from '../template-form-demo/template-form-demo';
 
 @Component({
   imports: [
@@ -45,8 +46,8 @@ import { FormDemo1 } from '../form-demo1/form-demo1';
     //TodoList
     //HttpDemo2
     //SignalDemo1
-    FormDemo1
-
+    //FormDemo1
+    TemplateFormDemo
 
 ],
   selector: 'app-body',
