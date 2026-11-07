@@ -23,6 +23,7 @@ import { SignalDemo1 } from '../signal-demo1/signal-demo1';
 import { FormDemo1 } from '../form-demo1/form-demo1';
 import { TemplateFormDemo } from '../template-form-demo/template-form-demo';
 import { ModelFormDemo1 } from '../model-form-demo1/model-form-demo1';
+import { SignalFormDemo } from '../signal-form-demo/signal-form-demo';
 
 @Component({
   imports: [
@@ -49,8 +50,8 @@ import { ModelFormDemo1 } from '../model-form-demo1/model-form-demo1';
     //SignalDemo1
     //FormDemo1
     //TemplateFormDemo
-    ModelFormDemo1
-
+    //ModelFormDemo1
+    SignalFormDemo
 
 ],
   selector: 'app-body',

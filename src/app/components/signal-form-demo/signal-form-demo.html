@@ -1,0 +1,26 @@
+
+<div class="border border-3 rounded-3 col-sm-4 offset-4 p-3">
+  <form>
+    <p>
+      Email: <input type="email" [formField]="loginForm.email" />
+
+      @if (loginForm.email().touched() && loginForm.email().invalid()) {
+        <ul>
+          @for (error of loginForm.email().errors(); track error) {
+            <li>{{ error.message }}</li>
+          }
+        </ul>
+      }
+    </p>
+    <p>
+      Password: <input type="password" [formField]="loginForm.password" />
+    </p>
+
+    <input type="reset" value="reset" />
+    <input type="submit" value="Submit" />
+
+  </form>
+
+  <div>Email: {{loginForm.email().value()}} </div>
+  <div>password: {{loginForm.password().value()}} </div>
+</div>
