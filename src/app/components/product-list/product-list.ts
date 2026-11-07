@@ -10,6 +10,7 @@ import { DisablePaste } from '../../custom-directives/disable-paste';
 import { TextOnly } from '../../custom-directives/text-only';
 import { ZoomIn } from '../../custom-directives/zoom-in';
 import { ZoomOut } from '../../custom-directives/zoom-out';
+import { RouterLink } from '@angular/router';
 
 @Component({
   imports: [
@@ -19,7 +20,8 @@ import { ZoomOut } from '../../custom-directives/zoom-out';
     TextOnly,
     DisablePaste,
     ZoomIn,
-    ZoomOut
+    ZoomOut,
+    RouterLink
 
   ],
   selector: 'app-product-list',
